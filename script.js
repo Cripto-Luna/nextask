@@ -38,8 +38,8 @@ async function sendMessage() {
         if (data.redirect_wa) {
             setTimeout(() => {
                 const waText = encodeURIComponent(`Hola, vengo del sitio web. ${text}`);
-                window.open(`https://wa.me/${WA_NUMBER}?text=${waText}`, '_blank');
-            }, 1500);
+                addMsg(`<a href="https://wa.me/${WA_NUMBER}?text=${waText}" target="_blank" style="color:#818cf8">👉 Cotizar por WhatsApp</a>`, 'bot');
+            }, 800);
         }
     } catch {
         removeMsg(typingId);
