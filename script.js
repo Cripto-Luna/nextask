@@ -1,6 +1,11 @@
 const BACKEND_URL = "https://web-production-be310.up.railway.app";
 const WA_NUMBER = "50495292446";
 
+function openChat() {
+    document.getElementById('chatWidget').classList.add('open');
+    document.getElementById('chatInput').focus();
+}
+
 function toggleChat() {
     const widget = document.getElementById('chatWidget');
     widget.classList.toggle('open');
