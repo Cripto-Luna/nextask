@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = "https://web-production-be310.up.railway.app";
 const WA_NUMBER = "50495292446";
 
 function toggleChat() {
