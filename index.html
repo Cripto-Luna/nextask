@@ -14,7 +14,7 @@
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="nav-container">
-        <div class="logo">TecPara<span>Todos</span></div>
+        <a href="#"><img src="LOGO.png" alt="Tecnología Para Todos" class="logo-img"></a>
         <ul class="nav-links">
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#precios">Precios</a></li>
@@ -269,6 +269,46 @@
     </div>
 </section>
 
+<!-- FORMULARIO DE RESEÑA -->
+<section class="resena-section">
+    <div class="container">
+        <h2>¿Ya trabajaste con nosotros?</h2>
+        <p class="section-sub">Déjanos tu reseña — nos ayuda a seguir mejorando</p>
+        <div class="resena-form-wrap">
+            <form id="resenaForm" onsubmit="enviarResena(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tu nombre *</label>
+                        <input type="text" id="resNombre" placeholder="Ej: María González" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tu negocio (opcional)</label>
+                        <input type="text" id="resNegocio" placeholder="Ej: Restaurante El Buen Sabor">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Calificación *</label>
+                    <div class="star-selector" id="starSelector">
+                        <span class="star" data-val="1">★</span>
+                        <span class="star" data-val="2">★</span>
+                        <span class="star" data-val="3">★</span>
+                        <span class="star" data-val="4">★</span>
+                        <span class="star" data-val="5">★</span>
+                    </div>
+                    <input type="hidden" id="resEstrellas" value="0">
+                </div>
+                <div class="form-group">
+                    <label>Tu experiencia *</label>
+                    <textarea id="resTexto" rows="4" placeholder="Cuéntanos cómo te fue con el servicio..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%; font-size:1rem; padding:1rem;">
+                    📤 Enviar reseña por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="cta" id="contacto">
     <div class="container">
@@ -289,7 +329,7 @@
 <!-- FOOTER -->
 <footer>
     <div class="container">
-        <div class="logo">TecPara<span>Todos</span></div>
+        <img src="LOGO.png" alt="Tecnología Para Todos" class="logo-img" style="height:50px; margin-bottom:0.5rem;">
         <p>Automatización y documentos profesionales · Disponible 24/7</p>
         <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank" style="color:#6366f1; text-decoration:none; font-size:0.85rem;">▶ Canal de YouTube</a>
         <p class="footer-copy">© 2026 Tecnología Para Todos. Todos los derechos reservados.</p>

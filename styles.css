@@ -26,6 +26,7 @@ body {
 }
 .logo { font-size: 1.5rem; font-weight: 800; color: #fff; }
 .logo span { color: #6366f1; }
+.logo-img { height: 44px; width: auto; display: block; object-fit: contain; }
 .nav-links { list-style: none; display: flex; gap: 2rem; align-items: center; }
 .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
 .nav-links a:hover { color: #fff; }
@@ -400,6 +401,67 @@ footer p { color: #475569; font-size: 0.85rem; margin-bottom: 0.3rem; }
 }
 .chat-input-area button:hover { background: #4f46e5; }
 
+/* FORMULARIO DE RESEÑA */
+.resena-section {
+    padding: 6rem 2rem;
+    background: #0d0d14;
+}
+.resena-section h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.resena-form-wrap {
+    max-width: 640px;
+    margin: 3rem auto 0;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+.form-group label {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+.form-group input, .form-group textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: #475569; }
+.form-group input:focus, .form-group textarea:focus { border-color: #6366f1; }
+.star-selector { display: flex; gap: 0.4rem; margin-top: 0.3rem; }
+.star {
+    font-size: 2rem;
+    color: #334155;
+    cursor: pointer;
+    transition: color 0.15s, transform 0.15s;
+    user-select: none;
+}
+.star.active, .star.hover { color: #f59e0b; }
+.star:hover { transform: scale(1.15); }
+
 /* CÓMO FUNCIONA */
 .como-funciona {
     padding: 6rem 2rem;
@@ -519,6 +581,7 @@ footer p { color: #475569; font-size: 0.85rem; margin-bottom: 0.3rem; }
     .pricing-grid { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr; }
     .testimonios-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
     .price-card.featured { transform: none; }
     .chat-widget { width: 90vw; right: 5vw; }
 }

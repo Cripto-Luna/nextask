@@ -68,3 +68,45 @@ function removeMsg(id) {
     const el = document.getElementById(id);
     if (el) el.remove();
 }
+
+// FORMULARIO DE RESEÑA
+let estrellasSeleccionadas = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            estrellasSeleccionadas = parseInt(star.dataset.val);
+            document.getElementById('resEstrellas').value = estrellasSeleccionadas;
+            stars.forEach(s => {
+                s.classList.toggle('active', parseInt(s.dataset.val) <= estrellasSeleccionadas);
+            });
+        });
+        star.addEventListener('mouseover', () => {
+            stars.forEach(s => {
+                s.classList.toggle('hover', parseInt(s.dataset.val) <= parseInt(star.dataset.val));
+            });
+        });
+        star.addEventListener('mouseout', () => {
+            stars.forEach(s => s.classList.remove('hover'));
+        });
+    });
+});
+
+function enviarResena(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('resNombre').value.trim();
+    const negocio = document.getElementById('resNegocio').value.trim();
+    const estrellas = document.getElementById('resEstrellas').value;
+    const texto = document.getElementById('resTexto').value.trim();
+
+    if (estrellas === '0') {
+        alert('Por favor selecciona una calificación con las estrellas.');
+        return;
+    }
+
+    const stars = '★'.repeat(parseInt(estrellas)) + '☆'.repeat(5 - parseInt(estrellas));
+    const negocioTexto = negocio ? `\nNegocio: ${negocio}` : '';
+    const msg = encodeURIComponent(`⭐ NUEVA RESEÑA\nNombre: ${nombre}${negocioTexto}\nCalificación: ${stars}\n\n"${texto}"`);
+    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+}
