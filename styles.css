@@ -27,7 +27,7 @@ body {
 .nav-links { justify-self: end; }
 .logo { font-size: 1.5rem; font-weight: 800; color: #fff; }
 .logo span { color: #6366f1; }
-.logo-img { height: 130px; width: auto; display: block; object-fit: contain; }
+.logo-img { height: 130px; width: auto; display: block; object-fit: contain; clip-path: inset(0 0 16% 0); }
 .logo-brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; gap: 0.4rem; }
 .badge-nav { font-size: 0.78rem; padding: 0.3rem 0.9rem; margin-bottom: 0; }
 .nav-links { list-style: none; display: flex; gap: 2rem; align-items: center; }
