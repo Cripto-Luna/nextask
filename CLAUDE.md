@@ -1,8 +1,10 @@
-# NexTask — Configuración del proyecto
+# Tecnología Para Todos — Configuración del proyecto
 
 ## Descripción
 Sitio web de servicios freelance con bot de atención 24/7 automatizado.
-URL: https://cripto-luna.github.io/nextask
+Nombre: Tecnología Para Todos (mismo nombre que el canal de YouTube)
+URL actual: https://cripto-luna.github.io/nextask
+URL nueva (pendiente renombrar repo en GitHub): https://cripto-luna.github.io/tecnologia-para-todos
 
 ## Servicios y precios (investigados en Fiverr 2026)
 - Conversión de documentos (PDF → Word/Excel/PPT): desde $5
@@ -21,8 +23,8 @@ URL: https://cripto-luna.github.io/nextask
 - Pago: 50% al inicio, 50% al entregar
 - Entrega: 24-48h documentos, 3-5 días páginas web. Pagos en USD.
 
-## Arquitectura del sitio NexTask
-- Frontend: GitHub Pages → https://github.com/Cripto-Luna/nextask
+## Arquitectura del sitio
+- Frontend: GitHub Pages → https://github.com/Cripto-Luna/nextask (renombrar a tecnologia-para-todos)
 - Backend: Railway (FastAPI + Python) → https://web-production-be310.up.railway.app
 - Bot: API de Anthropic (claude-haiku-4-5-20251001), usa `requests` directo a la API
 - API Key: guardada en Railway como variable ANTHROPIC_API_KEY (sin espacios ni saltos de línea)
@@ -34,13 +36,25 @@ URL: https://cripto-luna.github.io/nextask
 - Todos los botones de la página abren el chatbot (no WhatsApp directo)
 - Interferencia humana mínima — todo automatizado
 
-## Archivos clave NexTask
-- `index.html` — landing page completa
+## Archivos clave
+- `index.html` — landing page completa (secciones: hero, cómo funciona, servicios, precios, testimonios, CTA, footer)
 - `styles.css` — tema oscuro, color principal #6366f1 (púrpura)
 - `script.js` — lógica del chatbot widget
 - `backend/main.py` — FastAPI endpoint /chat
 - `backend/requirements.txt` — fastapi, uvicorn, requests, pydantic, python-dotenv
 - `backend/Procfile` — `web: uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+## Canal de YouTube
+- Canal: Tecnología Para Todos
+- URL: https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w
+- Estrategia: poner link de la página web en descripción de cada video para conseguir clientes orgánicos
+
+## Pasos pendientes para completar el cambio de nombre
+1. Renombrar el repo en GitHub de "nextask" a "tecnologia-para-todos"
+   - Ir a github.com/Cripto-Luna/nextask → Settings → Rename repository
+   - La URL cambiará automáticamente a cripto-luna.github.io/tecnologia-para-todos
+2. Actualizar BACKEND_URL en script.js (Railway URL no cambia, sigue igual)
+3. Verificar el handle del canal de YouTube y actualizar el link en index.html si es diferente
 
 ## Proceso para crear página web a un cliente
 
@@ -61,14 +75,14 @@ URL: https://cripto-luna.github.io/nextask
 6. Si quiere dominio propio (sunegocio.com): ~$12/año en Namecheap, costo del cliente
 
 ### Stack para páginas de clientes:
-- HTML/CSS/JS puro (mismo estilo que NexTask)
+- HTML/CSS/JS puro (mismo estilo que Tecnología Para Todos)
 - GitHub Pages (hosting gratis)
-- Se puede incluir chatbot (mismo sistema que NexTask) como extra
+- Se puede incluir chatbot (mismo sistema) como extra
 
 ## Proceso para crear chatbot a un cliente
 
 ### Tipos de chatbot que podemos ofrecer:
-- **Básico** ($149): Responde preguntas, da precios, info del negocio — igual que NexTask
+- **Básico** ($149): Responde preguntas, da precios, info del negocio
 - **Medio** ($250+): Agenda citas, consulta inventario via Google Sheets
 - **Avanzado** ($400+): Integración con WhatsApp Business API oficial (Meta)
 

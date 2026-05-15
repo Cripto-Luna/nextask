@@ -400,6 +400,114 @@ footer p { color: #475569; font-size: 0.85rem; margin-bottom: 0.3rem; }
 }
 .chat-input-area button:hover { background: #4f46e5; }
 
+/* CÓMO FUNCIONA */
+.como-funciona {
+    padding: 6rem 2rem;
+    background: #0d0d14;
+}
+.como-funciona h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.step-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.step-card:hover {
+    border-color: rgba(99,102,241,0.4);
+    transform: translateY(-4px);
+}
+.step-number {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #6366f1;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+.step-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.step-card h3 { font-size: 1.15rem; color: #fff; margin-bottom: 0.8rem; font-weight: 700; }
+.step-card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.6; }
+
+/* TESTIMONIOS */
+.testimonios {
+    padding: 6rem 2rem;
+}
+.testimonios h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+.testimonio-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s;
+}
+.testimonio-card:hover {
+    border-color: rgba(99,102,241,0.4);
+    transform: translateY(-4px);
+}
+.stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 1rem; }
+.testimonio-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+.testimonio-autor {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.autor-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+.testimonio-autor strong { display: block; color: #e2e8f0; font-size: 0.9rem; }
+.testimonio-autor span { color: #64748b; font-size: 0.8rem; }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .hero { flex-direction: column; text-align: center; padding-top: 6rem; }
@@ -409,6 +517,8 @@ footer p { color: #475569; font-size: 0.85rem; margin-bottom: 0.3rem; }
     .hero-stats { justify-content: center; }
     .services-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .testimonios-grid { grid-template-columns: 1fr; }
     .price-card.featured { transform: none; }
     .chat-widget { width: 90vw; right: 5vw; }
 }
