@@ -21,6 +21,10 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; font-size: 16px; position: relative; }
 nav, section, footer { position: relative; z-index: 1; }
+/* Fondos con transparencia para que la red neuronal se vea */
+.hero, .servicios, .testimonios, .resena-section { background: rgba(6,13,26,0.55) !important; }
+.trust-section, .como-funciona, .faq-section { background: rgba(10,22,40,0.7) !important; }
+.precios { background: rgba(6,13,26,0.6) !important; }
 .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 img { max-width: 100%; }
 a { text-decoration: none; }
