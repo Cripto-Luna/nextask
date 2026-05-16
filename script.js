@@ -1,5 +1,6 @@
 const BACKEND_URL = "https://web-production-be310.up.railway.app";
 const WA_NUMBER = "50495292446";
+let chatHistory = [];
 
 function openChat() {
     document.getElementById('chatWidget').classList.add('open');
@@ -9,6 +10,7 @@ function openChat() {
 function toggleChat() {
     const widget = document.getElementById('chatWidget');
     widget.classList.toggle('open');
+    if (!widget.classList.contains('open')) chatHistory = [];
 }
 
 function quickMsg(text) {
@@ -34,11 +36,13 @@ async function sendMessage() {
         const res = await fetch(`${BACKEND_URL}/chat`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: text })
+            body: JSON.stringify({ message: text, history: chatHistory })
         });
         const data = await res.json();
         removeMsg(typingId);
         addMsg(data.reply, 'bot');
+        chatHistory.push({ role: 'user', content: text });
+        chatHistory.push({ role: 'assistant', content: data.reply });
 
         if (data.redirect_wa) {
             setTimeout(() => {
