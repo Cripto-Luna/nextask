@@ -134,6 +134,19 @@ a { text-decoration: none; }
 .btn-service { display: inline-block; margin-top: 0.5rem; color: var(--primary); font-weight: 700; font-size: 0.9rem; border: 1.5px solid #BFDBFE; padding: 0.6rem 1.2rem; border-radius: 50px; text-align: center; transition: all 0.2s; }
 .btn-service:hover, .btn-service.featured { background: var(--primary); color: #fff; border-color: var(--primary); }
 
+/* COMPARACIÓN */
+.comparacion { padding: 90px 0; background: var(--bg-3); }
+.table-wrap { overflow-x: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.comp-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: #fff; }
+.comp-table th, .comp-table td { padding: 1rem 1.3rem; text-align: center; border-bottom: 1px solid var(--card-border); }
+.comp-table .th-feature, .comp-table td:first-child { text-align: left; font-weight: 600; color: var(--text); min-width: 200px; }
+.comp-table th { font-size: 0.85rem; font-weight: 700; background: var(--bg-3); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.comp-table th.col-us { background: var(--primary); color: #fff; }
+.comp-table td.col-us { background: #EFF6FF; color: var(--primary); font-weight: 600; }
+.comp-table tbody tr:last-child td { border-bottom: none; }
+.comp-table tbody tr:hover td { background: var(--bg-2); }
+.comp-table tbody tr:hover td.col-us { background: #DBEAFE; }
+
 /* PRECIOS */
 .precios { padding: 90px 0; background: var(--bg-2); }
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; align-items: start; }
