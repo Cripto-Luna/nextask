@@ -18,6 +18,13 @@ function quickMsg(text) {
     sendMessage();
 }
 
+function sendQuick(text) {
+    openChat();
+    document.getElementById('quickBtns').style.display = 'none';
+    document.getElementById('chatInput').value = text;
+    sendMessage();
+}
+
 function handleKey(e) {
     if (e.key === 'Enter') sendMessage();
 }

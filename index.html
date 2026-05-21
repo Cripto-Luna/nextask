@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnología Para Todos — Automatización y Documentos con IA</title>
-    <meta name="description" content="Chatbots 24/7, conversión de PDF a Word, traducciones, páginas web y automatizaciones con IA. Entrega en 24-48h. Desde $5.">
-    <meta name="keywords" content="chatbot para negocio, PDF a Word, traducción español inglés, automatización IA, página web profesional, Honduras, LATAM">
+    <title>Tecnología Para Todos — Automatización e IA para tu negocio</title>
+    <meta name="description" content="Chatbots 24/7, páginas web y documentos con IA. Entrega en 24-48h. Desde $5.">
+    <meta name="keywords" content="chatbot whatsapp, pagina web profesional, PDF a Word, automatizacion IA, Honduras, LATAM">
     <meta name="google-site-verification" content="MGnSk9HxvC85QlrMe6j2sbtjgJADhzNOvZU1bjwyNQI" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZDWTT3R8N"></script>
     <script>
@@ -14,615 +14,213 @@
       gtag('js', new Date());
       gtag('config', 'G-WZDWTT3R8N');
     </script>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        .pp-sep { text-align:center; color:#9ca3af; font-size:0.78rem; margin:14px 0 10px; letter-spacing:.03em; }
-        .pp-btn-wrap { min-height:45px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#" class="logo-brand">
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="#inicio" class="nav-logo">
             <img src="LOGO.png" alt="Tecnología Para Todos" class="logo-img">
-            <span class="logo-text">Tecnología Para Todos</span>
         </a>
         <ul class="nav-links">
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#precios">Precios</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#" onclick="openChat(); return false;" class="nav-btn">💬 Cotizar gratis</a></li>
         </ul>
-        <a href="#" onclick="openChat(); return false;" class="btn-nav">💬 Cotizar gratis</a>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="container hero-grid">
-        <div class="hero-content">
-            <div class="hero-badge">✨ Servicios digitales con IA — Entrega en 24-48h</div>
-            <h1>Tu negocio abierto 24/7,<br><span class="gradient-text">aunque estés durmiendo.</span></h1>
-            <p class="hero-sub">Chatbots que responden solos, páginas web profesionales y documentos con IA. Entrega garantizada en 24-48h. Desde $5.</p>
-            <div class="hero-btns">
-                <a href="#" onclick="openChat(); return false;" class="btn-primary">💬 Cotizar ahora — gratis</a>
-                <a href="https://wa.me/50495292446?text=Hola%2C%20vi%20su%20página%20y%20me%20interesa%20cotizar.%20¿Pueden%20ayudarme%3F" target="_blank" class="btn-outline">📱 WhatsApp directo</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item"><strong>50+</strong><span>Clientes</span></div>
-                <div class="stat-divider"></div>
-                <div class="stat-item"><strong>24/7</strong><span>Disponible</span></div>
-                <div class="stat-divider"></div>
-                <div class="stat-item"><strong>100%</strong><span>Garantía</span></div>
-                <div class="stat-divider"></div>
-                <div class="stat-item"><strong>24h</strong><span>Entrega</span></div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-circle-bg"></div>
-            <div class="hero-card card-1">
-                <div class="hcard-icon">📄</div>
-                <div><strong>PDF convertido</strong><span>Entregado en 2h ✓</span></div>
-            </div>
-            <div class="hero-card card-2">
-                <div class="hcard-icon">🤖</div>
-                <div><strong>Bot activo 24/7</strong><span>WhatsApp listo ✓</span></div>
-            </div>
-            <div class="hero-card card-3">
-                <div class="hcard-icon">🌐</div>
-                <div><strong>Página publicada</strong><span>En 5 días ✓</span></div>
-            </div>
-        </div>
+<section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="hero-tag">🤖 Chatbots · Páginas Web · Documentos con IA</p>
+        <h1>Tu negocio,<br><em>abierto 24/7.</em></h1>
+        <p class="hero-sub">Automatizamos tu atención al cliente y creamos tu presencia digital.<br>Entrega garantizada en 24-48 horas. Desde $5.</p>
+        <a href="#servicios" class="btn-hero">Ver servicios →</a>
     </div>
-</section>
-
-<!-- TECNOLOGÍAS -->
-<section class="trust-section">
-    <div class="container">
-        <p class="trust-label">Impulsado por las mejores tecnologías</p>
-        <div class="trust-logos">
-            <div class="trust-logo">🤖 OpenAI</div>
-            <div class="trust-logo">🔵 Claude AI</div>
-            <div class="trust-logo">🟢 WhatsApp Business</div>
-            <div class="trust-logo">🔍 Google Cloud</div>
-            <div class="trust-logo">⚡ Make / Zapier</div>
-        </div>
-    </div>
-</section>
-
-<!-- NÚMEROS DE IMPACTO -->
-<section class="impact-section">
-    <div class="container">
-        <div class="impact-grid">
-            <div class="impact-card">
-                <div class="impact-number">$5</div>
-                <div class="impact-label">Precio de entrada — el más bajo del mercado</div>
-            </div>
-            <div class="impact-card">
-                <div class="impact-number">24h</div>
-                <div class="impact-label">Entrega promedio — mientras una agencia tarda semanas</div>
-            </div>
-            <div class="impact-card">
-                <div class="impact-number">24/7</div>
-                <div class="impact-label">Tu chatbot responde clientes sin que muevas un dedo</div>
-            </div>
-            <div class="impact-card">
-                <div class="impact-number">100%</div>
-                <div class="impact-label">Garantía de satisfacción o te devolvemos el dinero</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CÓMO FUNCIONA -->
-<section class="como-funciona">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">¿Cómo funciona?</span>
-            <h2>Simple, rápido y sin complicaciones</h2>
-            <p>En 3 pasos tienes tu proyecto listo</p>
-        </div>
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-num">01</div>
-                <div class="step-icon">💬</div>
-                <h3>Escríbenos</h3>
-                <p>Abre el chat o WhatsApp. Cuéntanos qué necesitas y te respondemos en menos de 1 hora.</p>
-            </div>
-            <div class="step-arrow">→</div>
-            <div class="step-card">
-                <div class="step-num">02</div>
-                <div class="step-icon">📋</div>
-                <h3>Cotización exacta</h3>
-                <p>Analizamos tu proyecto y te enviamos precio y tiempo de entrega exactos. Sin sorpresas.</p>
-            </div>
-            <div class="step-arrow">→</div>
-            <div class="step-card">
-                <div class="step-num">03</div>
-                <div class="step-icon">🚀</div>
-                <h3>Entregamos</h3>
-                <p>Recibe tu trabajo en 24-48 horas. Revisión incluida hasta que quedes 100% satisfecho.</p>
-            </div>
-        </div>
+    <div class="hero-scroll">
+        <span>Deslizá</span>
+        <div class="scroll-line"></div>
     </div>
 </section>
 
 <!-- SERVICIOS -->
-<section class="servicios" id="servicios">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Servicios</span>
-            <h2>Todo para digitalizar tu negocio</h2>
-            <p>Soluciones con IA adaptadas a tu presupuesto</p>
+<section class="menu-section" id="servicios">
+    <div class="menu-label">
+        <h2>Nuestros Servicios</h2>
+        <p>Todo lo que tu negocio necesita para crecer en digital</p>
+    </div>
+
+    <div class="product-full reveal">
+        <div class="pf-img pf-bg-1">
+            <div class="svc-icon">🤖</div>
         </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">📄</div>
-                <h3>Documentos</h3>
-                <p>Convierte, formatea y edita documentos con precisión profesional.</p>
-                <ul>
-                    <li>PDF → Word / Excel / PowerPoint</li>
-                    <li>OCR — escaneos a texto editable</li>
-                    <li>Formateo y diseño profesional</li>
-                </ul>
-                <div class="service-price">Desde <strong>$5</strong></div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service">Solicitar →</a>
-            </div>
+        <div class="pf-info">
+            <span class="pf-tag">⭐ Más popular</span>
+            <h2>Chatbot WhatsApp 24/7</h2>
+            <p>Tu negocio responde solo aunque estés durmiendo. El bot atiende clientes, cotiza y agenda — completamente automático.</p>
+            <div class="pf-price">Desde <strong>$149</strong></div>
+            <button class="btn-order" onclick="openChat()">Cotizar ahora →</button>
+            <div class="pp-sep">— o paga directo —</div>
+            <div id="paypal-chatbot"></div>
+            <div id="paypal-chatbot-card" style="margin-top:8px"></div>
+        </div>
+    </div>
 
-            <div class="service-card featured">
-                <div class="featured-badge">⭐ Más popular</div>
-                <div class="service-icon">🤖</div>
-                <h3>Chatbot WhatsApp</h3>
-                <p>Tu negocio responde solo, las 24 horas, los 7 días de la semana.</p>
-                <ul>
-                    <li>Bot personalizado para tu negocio</li>
-                    <li>Responde, cotiza y agenda automático</li>
-                    <li>1 mes de soporte incluido</li>
-                </ul>
-                <div class="service-price">Desde <strong>$149</strong></div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service featured">Solicitar →</a>
-            </div>
+    <div class="product-full reveal reverse">
+        <div class="pf-img pf-bg-2">
+            <div class="svc-icon">🌐</div>
+        </div>
+        <div class="pf-info">
+            <span class="pf-tag">Páginas Web</span>
+            <h2>Página Web Profesional</h2>
+            <p>Tu presencia digital lista en 5 días. Diseño moderno, adaptada a móviles y con chatbot de atención al cliente incluido.</p>
+            <div class="pf-price">Desde <strong>$150</strong></div>
+            <button class="btn-order" onclick="openChat()">Cotizar ahora →</button>
+            <div class="pp-sep">— o paga directo —</div>
+            <div id="paypal-web"></div>
+            <div id="paypal-web-card" style="margin-top:8px"></div>
+        </div>
+    </div>
 
-            <div class="service-card">
-                <div class="service-icon">🖥️</div>
-                <h3>Páginas Web</h3>
-                <p>Tu presencia digital profesional, con bot de atención incluido.</p>
-                <ul>
-                    <li>Diseño moderno y responsive</li>
-                    <li>Adaptada a móviles y desktop</li>
-                    <li>Bot de atención al cliente incluido</li>
-                </ul>
-                <div class="service-price">Desde <strong>$150</strong></div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service">Solicitar →</a>
-            </div>
+    <div class="product-full reveal">
+        <div class="pf-img pf-bg-3">
+            <div class="svc-icon">📄</div>
+        </div>
+        <div class="pf-info">
+            <span class="pf-tag">Documentos</span>
+            <h2>PDF a Word en 2 Horas</h2>
+            <p>Convierte cualquier documento con precisión profesional. PDF, escaneados, formularios — formateados y listos para usar.</p>
+            <div class="pf-price">Desde <strong>$5</strong></div>
+            <a href="https://wa.me/50495292446?text=Hola%2C%20quiero%20convertir%20un%20PDF%20a%20Word" target="_blank" class="btn-order">Pedir ahora →</a>
+        </div>
+    </div>
 
-            <div class="service-card">
-                <div class="service-icon">🌍</div>
-                <h3>Traducción</h3>
-                <p>Documentos técnicos y legales traducidos con precisión.</p>
-                <ul>
-                    <li>Español ↔ Inglés ↔ Portugués</li>
-                    <li>Documentos legales y técnicos</li>
-                    <li>Entrega en 24h</li>
-                </ul>
-                <div class="service-price">Desde <strong>$0.08</strong>/palabra</div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service">Solicitar →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🎙️</div>
-                <h3>Transcripción</h3>
-                <p>Convierte audio y video a texto listo para usar.</p>
-                <ul>
-                    <li>Audio/video → texto editable</li>
-                    <li>Subtítulos (.srt) para videos</li>
-                    <li>Reuniones y entrevistas</li>
-                </ul>
-                <div class="service-price">Cotizar</div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service">Solicitar →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Automatización IA</h3>
-                <p>Elimina tareas repetitivas con flujos automáticos inteligentes.</p>
-                <ul>
-                    <li>Flujos automáticos con IA</li>
-                    <li>Integración entre sistemas</li>
-                    <li>Reportes automáticos</li>
-                </ul>
-                <div class="service-price">Cotizar</div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service">Solicitar →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">✍️</div>
-                <h3>Contenido con IA</h3>
-                <p>Posts, artículos y descripciones que generan resultados.</p>
-                <ul>
-                    <li>Posts para redes sociales</li>
-                    <li>Artículos y blogs optimizados</li>
-                    <li>Descripciones de productos</li>
-                </ul>
-                <div class="service-price">Cotizar</div>
-                <a href="#" onclick="openChat(); return false;" class="btn-service">Solicitar →</a>
-            </div>
+    <div class="product-full reveal reverse">
+        <div class="pf-img pf-bg-4">
+            <div class="svc-icon">🌍</div>
+        </div>
+        <div class="pf-info">
+            <span class="pf-tag">Traducción</span>
+            <h2>Traducción en 24 Horas</h2>
+            <p>Documentos técnicos y legales traducidos con precisión. Español, Inglés y Portugués — revisados y entregados rápido.</p>
+            <div class="pf-price">Desde <strong>$0.08</strong> / palabra</div>
+            <button class="btn-order" onclick="openChat()">Cotizar ahora →</button>
         </div>
     </div>
 </section>
 
-<!-- COMPARACIÓN -->
-<section class="comparacion">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">¿Por qué nosotros?</span>
-            <h2>La comparación habla por sí sola</h2>
-            <p>Misma calidad que una agencia grande — sin el precio ni la espera</p>
-        </div>
-        <div class="table-wrap">
-            <table class="comp-table">
-                <thead>
-                    <tr>
-                        <th class="th-feature">Característica</th>
-                        <th class="col-us">✅ Tecnología Para Todos</th>
-                        <th>Agencia grande</th>
-                        <th>Hacerlo solo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Precio</td>
-                        <td class="col-us"><strong>Desde $5</strong></td>
-                        <td>$500 – $5,000+</td>
-                        <td>Tiempo = dinero</td>
-                    </tr>
-                    <tr>
-                        <td>Tiempo de entrega</td>
-                        <td class="col-us"><strong>24 – 48 horas</strong></td>
-                        <td>2 – 4 semanas</td>
-                        <td>Semanas o meses</td>
-                    </tr>
-                    <tr>
-                        <td>Precios claros sin cotizar</td>
-                        <td class="col-us">✓</td>
-                        <td>✗</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>Pago directo con PayPal</td>
-                        <td class="col-us">✓</td>
-                        <td>✗</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>Sin contratos largos</td>
-                        <td class="col-us">✓</td>
-                        <td>✗ Mínimo 6 meses</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>Soporte incluido</td>
-                        <td class="col-us">✓ 1 mes gratis</td>
-                        <td>✗ Costo extra</td>
-                        <td>✗</td>
-                    </tr>
-                    <tr>
-                        <td>Garantía de satisfacción</td>
-                        <td class="col-us">✓ 100% o reembolso</td>
-                        <td>Varía</td>
-                        <td>✗</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<!-- NOSOTROS / STATS -->
+<section class="nosotros-section" id="nosotros">
+    <div class="nos-header reveal">
+        <span class="pf-tag">¿Por qué elegirnos?</span>
+        <h2>Rápido, accesible<br>y garantizado</h2>
+        <p>El punto medio entre una agencia cara y hacerlo tú solo. Precios claros, entrega en horas y garantía total.</p>
     </div>
-</section>
-
-<!-- PRECIOS -->
-<section class="precios" id="precios">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Precios</span>
-            <h2>Precios claros, sin sorpresas</h2>
-            <p>Pago por proyecto — sin suscripciones ni contratos</p>
+    <div class="nos-cards reveal">
+        <div class="nos-card">
+            <div class="nos-num">$5</div>
+            <div class="nos-label">Precio de entrada</div>
+            <p>El más económico del mercado. Las agencias cobran $500 o más.</p>
         </div>
-        <div class="pricing-grid">
-            <div class="price-card">
-                <div class="price-icon">📄</div>
-                <h3>Documentos</h3>
-                <div class="price-amount">desde <strong>$5</strong></div>
-                <ul>
-                    <li>PDF → Word (hasta 10 pág)</li>
-                    <li>Entrega en 2 horas</li>
-                    <li>Revisión incluida</li>
-                    <li>Formateo profesional</li>
-                </ul>
-                <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
-            </div>
-
-            <div class="price-card featured">
-                <div class="featured-tag">Más vendido</div>
-                <div class="price-icon">🤖</div>
-                <h3>Chatbot WhatsApp</h3>
-                <div class="price-amount">desde <strong>$149</strong></div>
-                <ul>
-                    <li>Bot completamente personalizado</li>
-                    <li>Configuración completa incluida</li>
-                    <li>1 mes de soporte</li>
-                    <li>Entrega en 3 días</li>
-                </ul>
-                <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
-                <div class="pp-sep">— o paga directamente —</div>
-                <div class="pp-btn-wrap" id="paypal-chatbot"></div>
-                <div class="pp-btn-wrap" id="paypal-chatbot-card" style="margin-top:8px"></div>
-            </div>
-
-            <div class="price-card">
-                <div class="price-icon">🖥️</div>
-                <h3>Página Web</h3>
-                <div class="price-amount">desde <strong>$150</strong></div>
-                <ul>
-                    <li>Diseño personalizado</li>
-                    <li>Responsive (móvil y desktop)</li>
-                    <li>Bot de atención incluido</li>
-                    <li>Entrega en 5 días</li>
-                </ul>
-                <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
-                <div class="pp-sep">— o paga directamente —</div>
-                <div class="pp-btn-wrap" id="paypal-web"></div>
-                <div class="pp-btn-wrap" id="paypal-web-card" style="margin-top:8px"></div>
-            </div>
-
-            <div class="price-card">
-                <div class="price-icon">🌍</div>
-                <h3>Traducción</h3>
-                <div class="price-amount">desde <strong>$0.08</strong><span class="price-unit">/palabra</span></div>
-                <ul>
-                    <li>Español / Inglés / Portugués</li>
-                    <li>Revisión de calidad</li>
-                    <li>Entrega en 24h</li>
-                    <li>Documentos legales y técnicos</li>
-                </ul>
-                <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
-            </div>
+        <div class="nos-card">
+            <div class="nos-num">24h</div>
+            <div class="nos-label">Entrega promedio</div>
+            <p>Mientras una agencia tarda semanas, nosotros entregamos en horas.</p>
         </div>
-    </div>
-</section>
-
-<!-- TESTIMONIOS -->
-<section class="testimonios">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Testimonios</span>
-            <h2>Lo que dicen nuestros clientes</h2>
-            <p>Resultados reales de negocios como el tuyo</p>
+        <div class="nos-card">
+            <div class="nos-num">24/7</div>
+            <div class="nos-label">Tu bot trabaja solo</div>
+            <p>Sin que estés presente, tu chatbot atiende y cotiza automáticamente.</p>
         </div>
-        <div class="testimonios-grid">
-            <div class="testimonio-card">
-                <div class="stars">★★★★★</div>
-                <p>"El chatbot para mi restaurante fue un cambio total. Mis clientes preguntan el menú y hacen pedidos por WhatsApp sin que yo tenga que responder manualmente."</p>
-                <div class="testimonio-autor">
-                    <div class="autor-avatar">MG</div>
-                    <div>
-                        <strong>María González</strong>
-                        <span>Restaurante El Buen Sabor, Honduras</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonio-card">
-                <div class="stars">★★★★★</div>
-                <p>"Necesitaba convertir 50 páginas de PDF a Word para una propuesta urgente. Lo entregaron en 2 horas perfectamente formateado. Servicio impecable."</p>
-                <div class="testimonio-autor">
-                    <div class="autor-avatar">CM</div>
-                    <div>
-                        <strong>Carlos Mendoza</strong>
-                        <span>Consultor independiente, México</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonio-card">
-                <div class="stars">★★★★★</div>
-                <p>"Mi página web quedó increíble en 4 días. Con el bot incluido mis clientes pueden cotizar solos sin llamarme. Totalmente lo recomiendo."</p>
-                <div class="testimonio-autor">
-                    <div class="autor-avatar">AR</div>
-                    <div>
-                        <strong>Ana Reyes</strong>
-                        <span>Tienda online, Guatemala</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section" id="faq">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">FAQ</span>
-            <h2>Preguntas frecuentes</h2>
-            <p>Todo lo que necesitas saber antes de empezar</p>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    ¿Cómo hago el pago? <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Aceptamos PayPal para clientes internacionales y transferencia bancaria local para clientes de Honduras. El pago se confirma al iniciar el proyecto.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    ¿Cuánto tiempo tardan en entregar? <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Documentos en 2-4 horas. Traducciones en 24 horas. Chatbots de WhatsApp en 3 días. Páginas web en 5 días. Siempre te confirmamos el tiempo exacto al recibir tu proyecto.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    ¿Qué pasa si no quedo satisfecho? <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Ofrecemos revisiones hasta que quedes satisfecho. Si el resultado no cumple lo acordado, hacemos reembolso completo. Tu satisfacción es nuestra prioridad.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    ¿Trabajan con clientes fuera de Honduras? <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Sí, atendemos clientes de toda Latinoamérica y Estados Unidos. Trabajamos 100% en línea por WhatsApp, email y transferencias internacionales vía PayPal.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    ¿Puedo ver ejemplos de trabajos anteriores? <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Claro. Escríbenos por WhatsApp y te enviamos ejemplos del servicio que te interesa: documentos convertidos, chatbots funcionando o páginas web entregadas.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- RESEÑA -->
-<section class="resena-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Reseñas</span>
-            <h2>¿Ya trabajaste con nosotros?</h2>
-            <p>Déjanos tu reseña — nos ayuda a seguir mejorando</p>
-        </div>
-        <div class="resena-form-wrap">
-            <form id="resenaForm" onsubmit="enviarResena(event)">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Tu nombre *</label>
-                        <input type="text" id="resNombre" placeholder="Ej: María González" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Tu negocio (opcional)</label>
-                        <input type="text" id="resNegocio" placeholder="Ej: Restaurante El Buen Sabor">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Calificación *</label>
-                    <div class="star-selector" id="starSelector">
-                        <span class="star" data-val="1">★</span>
-                        <span class="star" data-val="2">★</span>
-                        <span class="star" data-val="3">★</span>
-                        <span class="star" data-val="4">★</span>
-                        <span class="star" data-val="5">★</span>
-                    </div>
-                    <input type="hidden" id="resEstrellas" value="0">
-                </div>
-                <div class="form-group">
-                    <label>Tu experiencia *</label>
-                    <textarea id="resTexto" rows="4" placeholder="Cuéntanos cómo te fue con el servicio..." required></textarea>
-                </div>
-                <button type="submit" class="btn-primary" style="width:100%; font-size:1rem; padding:1rem;">
-                    📤 Enviar reseña por WhatsApp
-                </button>
-            </form>
+        <div class="nos-card">
+            <div class="nos-num">100%</div>
+            <div class="nos-label">Garantía total</div>
+            <p>Si no quedas satisfecho, te devolvemos el dinero. Sin preguntas.</p>
         </div>
     </div>
 </section>
 
 <!-- CTA FINAL -->
-<section class="cta-final" id="contacto">
-    <div class="container">
-        <h2>¿Tienes un proyecto en mente?</h2>
+<section class="cta-section" id="contacto">
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+        <h2>¿Listo para automatizar<br>tu negocio?</h2>
         <p>Escríbenos ahora — respondemos en menos de 1 hora</p>
-        <div class="cta-btns">
-            <a href="#" onclick="openChat(); return false;" class="btn-primary btn-large">💬 Hablar con el asistente</a>
-            <a href="https://wa.me/50495292446?text=Hola%2C%20vi%20su%20página%20y%20me%20interesa%20cotizar.%20¿Pueden%20ayudarme%3F" target="_blank" class="btn-wa-large">📱 WhatsApp directo</a>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+            <button class="btn-hero" onclick="openChat()">💬 Hablar con el asistente</button>
+            <a href="https://wa.me/50495292446?text=Hola%2C%20vi%20su%20página%20y%20me%20interesa%20cotizar" target="_blank" class="btn-hero btn-hero-wa">📱 WhatsApp directo</a>
         </div>
-        <div class="cta-info">
-            <span>📧 1962shopify@gmail.com</span>
-            <span class="sep">·</span>
-            <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank">▶ YouTube</a>
-        </div>
+        <p class="cta-contact">📧 21dinamica@gmail.com &nbsp;·&nbsp; <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank">▶ YouTube</a></p>
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="LOGO.png" alt="Tecnología Para Todos" style="height:44px; margin-bottom:0.75rem;">
-                <p>Automatización y documentos profesionales<br>Disponible 24/7 para tu negocio</p>
-            </div>
-            <div class="footer-col">
-                <h4>Servicios</h4>
-                <a href="#servicios">Documentos PDF</a>
-                <a href="#servicios">Chatbot WhatsApp</a>
-                <a href="#servicios">Páginas Web</a>
-                <a href="#servicios">Traducciones</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <a href="https://wa.me/50495292446?text=Hola%2C%20vi%20su%20página%20y%20me%20interesa%20cotizar.%20¿Pueden%20ayudarme%3F" target="_blank">📱 +504 9529-2446</a>
-                <a href="mailto:1962shopify@gmail.com">📧 Email</a>
-                <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank">▶ YouTube</a>
-            </div>
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="LOGO.png" alt="Tecnología Para Todos" style="height:42px;margin-bottom:12px;">
+            <p>Automatización e IA para negocios.<br>Disponibles 24/7 para tu negocio.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 Tecnología Para Todos. Todos los derechos reservados.</p>
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <a href="#servicios">Chatbot WhatsApp</a>
+            <a href="#servicios">Páginas Web</a>
+            <a href="#servicios">Documentos PDF</a>
+            <a href="#servicios">Traducciones</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <a href="https://wa.me/50495292446" target="_blank">📱 +504 9529-2446</a>
+            <a href="mailto:21dinamica@gmail.com">📧 Email</a>
+            <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank">▶ YouTube</a>
         </div>
     </div>
+    <div class="footer-bottom"><p>© 2026 Tecnología Para Todos · Todos los derechos reservados</p></div>
 </footer>
 
+<!-- CHAT FAB -->
+<button class="chat-fab" onclick="toggleChat()" id="chatFab">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    <span>¿Te ayudamos?</span>
+</button>
+
 <!-- CHAT WIDGET -->
-<div class="chat-widget" id="chatWidget">
-    <div class="chat-header">
-        <div class="chat-avatar">🤖</div>
-        <div>
-            <strong>TecPara Todos Bot</strong>
-            <span class="online">● En línea</span>
+<div id="chatWidget" class="chat-widget">
+    <div class="chat-header" onclick="toggleChat()">
+        <div class="chat-header-left">
+            <div class="chat-avatar">🤖</div>
+            <div>
+                <div class="chat-title">Asistente TecPara Todos</div>
+                <div class="chat-status">● En línea · 24/7</div>
+            </div>
         </div>
-        <button class="chat-close" onclick="toggleChat()">✕</button>
+        <button class="chat-close">✕</button>
     </div>
     <div class="chat-messages" id="chatMessages">
-        <div class="msg bot">¡Hola! 👋 Soy el asistente de Tecnología Para Todos. ¿En qué puedo ayudarte?<br><br>
-            <button class="quick-btn" onclick="quickMsg('Quiero convertir un PDF')">📄 Convertir PDF</button>
-            <button class="quick-btn" onclick="quickMsg('Quiero un chatbot de WhatsApp')">🤖 Chatbot WhatsApp</button>
-            <button class="quick-btn" onclick="quickMsg('Quiero integrar un bot en mi página web existente')">🔌 Bot en mi web</button>
-            <button class="quick-btn" onclick="quickMsg('Necesito una traducción')">🌐 Traducción</button>
-            <button class="quick-btn" onclick="quickMsg('Quiero una página web')">🖥️ Página Web</button>
-        </div>
+        <div class="msg bot-msg"><div class="msg-bubble">¡Hola! 👋 Soy el asistente de <strong>Tecnología Para Todos</strong>. ¿En qué puedo ayudarte?</div></div>
+    </div>
+    <div class="chat-quick-btns" id="quickBtns">
+        <button onclick="sendQuick('Quiero un chatbot de WhatsApp')">🤖 Chatbot</button>
+        <button onclick="sendQuick('Quiero una página web')">🌐 Página Web</button>
+        <button onclick="sendQuick('Quiero convertir un PDF a Word')">📄 PDF a Word</button>
+        <button onclick="sendQuick('Necesito una traducción')">🌍 Traducción</button>
+        <button onclick="sendQuick('Quiero hablar con una persona')">👤 Hablar con alguien</button>
     </div>
     <div class="chat-input-area">
-        <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeypress="handleKey(event)">
-        <button onclick="sendMessage()">➤</button>
+        <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeydown="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()" class="send-btn">➤</button>
     </div>
 </div>
-<button class="chat-toggle" id="chatToggle" onclick="toggleChat()">
-    💬 <span>¿Necesitas ayuda?</span>
-</button>
 
 <script src="script.js"></script>
 <script src="https://www.paypal.com/sdk/js?client-id=AR1b67r5qkMTk8DsCF2i7cq719p1dOB0mgVjKUitYaqYRmgBzJCki5iDyqLBmUH_2Ng9yEdftDNDD1WW"></script>
 <script>
-var PP_LINKS = {
-    'paypal-docs':    { url: 'https://www.paypal.me/lunaproducts62/5',   label: '💳 Pagar $5 con PayPal' },
-    'paypal-chatbot': { url: 'https://www.paypal.me/lunaproducts62/149', label: '💳 Pagar $149 con PayPal' },
-    'paypal-web':     { url: 'https://www.paypal.me/lunaproducts62/150', label: '💳 Pagar $150 con PayPal' }
-};
-
-function fallbackPayPal() {
-    Object.keys(PP_LINKS).forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) el.innerHTML = '<a href="' + PP_LINKS[id].url + '" target="_blank" style="display:block;text-align:center;background:#ffc439;color:#111;padding:11px;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.95rem;">' + PP_LINKS[id].label + '</a>';
-    });
-}
-
 if (typeof paypal !== 'undefined') {
     function makeOrder(desc, amount) {
         return function(data, actions) {
@@ -646,25 +244,21 @@ if (typeof paypal !== 'undefined') {
             paypal.Buttons({ fundingSource: paypal.FUNDING.CARD,   createOrder: makeOrder(s.desc, s.amount), onApprove: onApprove }).render('#' + s.cardId);
         } catch(e) {}
     });
-} else {
-    ['paypal-chatbot','paypal-web'].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) el.innerHTML = '<a href="' + PP_LINKS[id].url + '" target="_blank" style="display:block;text-align:center;background:#ffc439;color:#111;padding:11px;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.95rem;">' + PP_LINKS[id].label + '</a>';
-    });
 }
 </script>
 <script>
-function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-icon').textContent = '+';
-    });
-    if (!isOpen) {
-        item.classList.add('open');
-        btn.querySelector('.faq-icon').textContent = '−';
-    }
+window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function openChat() {
+    document.getElementById('chatWidget').classList.add('open');
+    document.getElementById('chatFab').classList.add('hidden');
 }
 </script>
 </body>
