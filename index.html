@@ -290,6 +290,7 @@
                 <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
                 <div class="pp-sep">— o paga directamente —</div>
                 <div class="pp-btn-wrap" id="paypal-chatbot"></div>
+                <div class="pp-btn-wrap" id="paypal-chatbot-card" style="margin-top:8px"></div>
             </div>
 
             <div class="price-card">
@@ -305,6 +306,7 @@
                 <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
                 <div class="pp-sep">— o paga directamente —</div>
                 <div class="pp-btn-wrap" id="paypal-web"></div>
+                <div class="pp-btn-wrap" id="paypal-web-card" style="margin-top:8px"></div>
             </div>
 
             <div class="price-card">
@@ -555,25 +557,28 @@ function fallbackPayPal() {
 }
 
 if (typeof paypal !== 'undefined') {
-    function renderPayPal(id, desc, amount) {
-        try {
-            paypal.Buttons({
-                fundingSource: paypal.FUNDING.PAYPAL,
-                createOrder: function(data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{ description: desc, amount: { currency_code: 'USD', value: amount } }]
-                    });
-                },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        alert('Pago confirmado. Gracias ' + details.payer.name.given_name + '. Te contactamos pronto para iniciar tu proyecto.');
-                    });
-                }
-            }).render('#' + id);
-        } catch(e) { fallbackPayPal(); }
+    function makeOrder(desc, amount) {
+        return function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{ description: desc, amount: { currency_code: 'USD', value: amount } }]
+            });
+        };
     }
-    renderPayPal('paypal-chatbot', 'Chatbot WhatsApp — TecnoAutomatiza', '149.00');
-    renderPayPal('paypal-web',     'Pagina Web — TecnoAutomatiza', '150.00');
+    function onApprove(data, actions) {
+        return actions.order.capture().then(function(details) {
+            alert('Pago confirmado. Gracias ' + details.payer.name.given_name + '. Te contactamos pronto para iniciar tu proyecto.');
+        });
+    }
+    var services = [
+        { id: 'paypal-chatbot', cardId: 'paypal-chatbot-card', desc: 'Chatbot WhatsApp — TecnoAutomatiza', amount: '149.00' },
+        { id: 'paypal-web',     cardId: 'paypal-web-card',     desc: 'Pagina Web — TecnoAutomatiza',       amount: '150.00' }
+    ];
+    services.forEach(function(s) {
+        try {
+            paypal.Buttons({ fundingSource: paypal.FUNDING.PAYPAL, createOrder: makeOrder(s.desc, s.amount), onApprove: onApprove }).render('#' + s.id);
+            paypal.Buttons({ fundingSource: paypal.FUNDING.CARD,   createOrder: makeOrder(s.desc, s.amount), onApprove: onApprove }).render('#' + s.cardId);
+        } catch(e) {}
+    });
 } else {
     ['paypal-chatbot','paypal-web'].forEach(function(id) {
         var el = document.getElementById(id);
