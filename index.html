@@ -16,7 +16,7 @@
     </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://www.paypal.com/sdk/js?client-id=EB2_173fx3fPWKXbMYBJuNl_jtDOUpu_qipkBx2Co4TBSpIxejdz-v19nfsgL8nq4fHdXRY7XxyoBXwd&currency=USD&locale=es_ES&disable-funding=venmo,paylater" data-namespace="paypalSDK"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=EB2_173fx3fPWKXbMYBJuNl_jtDOUpu_qipkBx2Co4TBSpIxejdz-v19nfsgL8nq4fHdXRY7XxyoBXwd&currency=USD&locale=es_ES&disable-funding=venmo,paylater"></script>
     <style>
         .pp-sep { text-align:center; color:#9ca3af; font-size:0.78rem; margin:14px 0 10px; letter-spacing:.03em; }
         .pp-btn-wrap { min-height:45px; }
@@ -547,9 +547,9 @@
 <script src="script.js"></script>
 <script>
 (function () {
-    if (typeof paypalSDK === 'undefined') return;
+    if (typeof paypal === 'undefined') return;
     function btn(id, desc, amount) {
-        paypalSDK.Buttons({
+        paypal.Buttons({
             style: { layout: 'horizontal', color: 'gold', shape: 'rect', label: 'pay', height: 40, tagline: false },
             createOrder: function (data, actions) {
                 return actions.order.create({
