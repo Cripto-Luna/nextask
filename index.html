@@ -274,8 +274,6 @@
                     <li>Formateo profesional</li>
                 </ul>
                 <a href="#" onclick="openChat(); return false;" class="btn-primary">Cotizar ahora</a>
-                <div class="pp-sep">— o paga directamente —</div>
-                <div class="pp-btn-wrap" id="paypal-docs"></div>
             </div>
 
             <div class="price-card featured">
@@ -479,8 +477,6 @@
         <div class="cta-info">
             <span>📧 1962shopify@gmail.com</span>
             <span class="sep">·</span>
-            <a href="https://paypal.me/lunaproducts62" target="_blank">💳 Pagar con PayPal</a>
-            <span class="sep">·</span>
             <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank">▶ YouTube</a>
         </div>
     </div>
@@ -506,7 +502,6 @@
                 <a href="https://wa.me/50495292446?text=Hola%2C%20vi%20su%20página%20y%20me%20interesa%20cotizar.%20¿Pueden%20ayudarme%3F" target="_blank">📱 +504 9529-2446</a>
                 <a href="mailto:1962shopify@gmail.com">📧 Email</a>
                 <a href="https://www.youtube.com/@TECNOLOGIAPARATODOS-e8w" target="_blank">▶ YouTube</a>
-                <a href="https://paypal.me/lunaproducts62" target="_blank">💳 PayPal</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -563,6 +558,7 @@ if (typeof paypal !== 'undefined') {
     function renderPayPal(id, desc, amount) {
         try {
             paypal.Buttons({
+                fundingSource: paypal.FUNDING.PAYPAL,
                 createOrder: function(data, actions) {
                     return actions.order.create({
                         purchase_units: [{ description: desc, amount: { currency_code: 'USD', value: amount } }]
@@ -576,11 +572,13 @@ if (typeof paypal !== 'undefined') {
             }).render('#' + id);
         } catch(e) { fallbackPayPal(); }
     }
-    renderPayPal('paypal-docs',    'Documentos PDF — TecnoAutomatiza', '5.00');
     renderPayPal('paypal-chatbot', 'Chatbot WhatsApp — TecnoAutomatiza', '149.00');
     renderPayPal('paypal-web',     'Pagina Web — TecnoAutomatiza', '150.00');
 } else {
-    fallbackPayPal();
+    ['paypal-chatbot','paypal-web'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.innerHTML = '<a href="' + PP_LINKS[id].url + '" target="_blank" style="display:block;text-align:center;background:#ffc439;color:#111;padding:11px;border-radius:6px;font-weight:700;text-decoration:none;font-size:0.95rem;">' + PP_LINKS[id].label + '</a>';
+    });
 }
 </script>
 <script>
